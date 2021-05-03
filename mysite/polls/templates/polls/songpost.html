@@ -1,0 +1,22 @@
+{%extends 'polls/base.html'%}
+{% block title%}All Songs{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6" style="padding-top: 3%;">
+      <img src="/media/{{song.image}}" alt="" height="310px" width="310px">
+      <h2 style="font-weight: 550;color: green;"> {{song.name}}</h2>
+    </div>
+
+    <div class="col-md-6" style="padding-top: 3%;">
+      <h2 style="padding-top: 1%; font-weight: 550;color: black;">Singer: {{song.singer}}</h2>
+      <audio controls>
+        <source src="/media/{{song.song}}" type="audio/mp3">
+      </audio>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
